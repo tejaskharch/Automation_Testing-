@@ -1,0 +1,38 @@
+package selenium_intermediate;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class jse {
+public static void main(String args []) throws InterruptedException {
+		
+		
+	    System.setProperty("webdriver.chrome.driver","E:\\silenium all\\chromedriver.exe");
+	    
+	    
+	    
+	    WebDriver driver = new ChromeDriver();
+	    driver.manage().window().maximize();
+	    driver.get("https://www.google.com/search?q=kuchbhi&source=hp&ei=7mb3Y92KPM6h1e8Pm76e2As&iflsig=AK50M_UAAAAAY_d0_wra3NB6XAMpLQzhizerfg_fPIaW&ved=0ahUKEwjduZDz3Kv9AhXOUPUHHRufB7sQ4dUDCAg&uact=5&oq=kuchbhi&gs_lcp=Cgdnd3Mtd2l6EAMyBQguEIAEMgUIABCABDIHCAAQgAQQCjIHCC4QgAQQCjIHCC4QgAQQCjIFCAAQgAQyBwgAEIAEEAoyCwguEIAEEMcBEK8BMgcIABCABBAKMgcIABCABBAKOg4IABCPARDqAhCMAxDlAjoLCAAQgAQQsQMQgwE6CwguEIAEELEDEIMBOhEILhCDARDHARCxAxDRAxCABDoICC4QgAQQsQM6CAguELEDEIMBOggILhCxAxCABDoICAAQgAQQsQM6CAguENQCEIAEOgUILhCxAzoLCC4QgAQQsQMQ1AJQAFiz-wpg6P0KaAFwAHgBgAG_BIgB3xySAQswLjUuMS4xLjAuNJgBAKABAbABCg&sclient=gws-wiz");
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    
+	    
+	    
+	    
+	    
+	   JavascriptExecutor jse;
+	   jse=(JavascriptExecutor)driver;
+	   jse.executeScript("scroll(0,3000)");
+	   
+	   
+	   driver.findElement(By.xpath("//span[@class='SJajHc NVbCr']")).click();
+	   
+	 
+	 driver.quit();
+	 
+}
+}
